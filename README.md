@@ -1,2 +1,4 @@
 # DataStructure
-##nku_grade2_dataStructure
+## nku_grade2_dataStructure
+teacher: Mingming Liu
+
