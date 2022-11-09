@@ -539,7 +539,7 @@ public:
     void deleteByVal(int n)
     {
         if (root == NULL)
-            // Tree is empty
+            //cout<<"Null ";
             return;
 
         Node *v = search(n), *u;
@@ -557,7 +557,7 @@ public:
     void printPreOrder()
     {
         if (root == NULL)
-            cout << "Tree is empty" << endl;
+            cout << "Null" << endl;
         else
             Preorder(root);
         cout << endl;
