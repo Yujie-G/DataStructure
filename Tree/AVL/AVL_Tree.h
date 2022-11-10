@@ -10,6 +10,7 @@
 #define ULL unsigned long long
 #define INF 0x7fffffff
 #define MAXN 500
+
 using namespace std;
 
 struct AVLNode
@@ -18,7 +19,7 @@ struct AVLNode
     AVLNode *left;
     AVLNode *right;
     int height = -INF;
-} *root;
+};
 
 int getHeight(AVLNode *T)
 {
@@ -64,6 +65,21 @@ AVLNode *RL_Rotate(AVLNode *A)
 {
     A->right = LL_Rotate(A->right);
     return RR_Rotate(A);
+}
+
+AVLNode *Find(ElementType Target, AVLNode *AVLT)
+{
+	if (!AVLT)
+	{
+		// cout<<"flag";
+		return nullptr; /*查找失败*/
+	}
+	if (Target > AVLT->Num)
+		return Find(Target, AVLT->right); /*在右子树中继续查找*/
+	else if (Target < AVLT->Num)
+		return Find(Target, AVLT->left); /*在左子树中继续查找*/
+	else								/* Target == AVLT->Num */
+		return AVLT;						/*查找成功，返回结点的找到结点的地址*/
 }
 
 AVLNode *Insert(AVLNode *R, int num)
