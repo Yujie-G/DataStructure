@@ -18,7 +18,7 @@
 #define RG register
 #define LL long long
 #define ULL unsigned long long
-#define INF 100000
+#define INF 999999
 #define MAXN 1000
 using namespace std;
 
