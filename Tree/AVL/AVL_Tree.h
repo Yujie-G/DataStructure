@@ -10,7 +10,7 @@
 #define ULL unsigned long long
 #define INF 0x7fffffff
 #define MAXN 500
-
+typedef int ElementType;
 using namespace std;
 
 struct AVLNode
